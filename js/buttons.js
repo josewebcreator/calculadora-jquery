@@ -2,4 +2,10 @@
 
 $(document).ready(function () {
     
+    //numeros
+
+    $('number').click(function()
+    {
+        console.log($(this).value);
+    })
 });
