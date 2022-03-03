@@ -10,26 +10,28 @@ Este archivo inclulle todas las funciones aritmeticas de la calculadora
 
 */
 
-$(document).ready(function () {
+
     
     //VARIABLES
 
-    //numbers
-
-    var a;
-    var b;
 
     //objets
 
     var calculator = {
         
+        number1: 0,
+        number2:0,
+        temp: 0,
+        operator: null, 
+
+
         //sum operation
         sum(a,b){
 
             var result = a + b;
 
-            calculator.a = result;
-            calculator.b = 0;
+            calculator.number1 = result;
+            calculator.number2 = 0;
 
             return result;
         },
@@ -40,8 +42,8 @@ $(document).ready(function () {
 
             var result = a - b;
 
-            calculator.a = result;
-            calculator.b = 0;
+            calculator.number1 = result;
+            calculator.number2 = 0;
 
             return result;
         },
@@ -52,8 +54,8 @@ $(document).ready(function () {
 
             var result = a * b;
 
-            calculator.a = result;
-            calculator.b = 0;
+            calculator.number1 = result;
+            calculator.number2 = 0;
 
             return result;
         },
@@ -65,19 +67,18 @@ $(document).ready(function () {
             //validation of 0
 
             if( b === 0){
-                return '0 cannot divide';
+                return 'div0';
             }else{
                 var result = a / b;
 
-                calculator.a = result;
-                calculator.b = 0;
+                calculator.number1 = result;
+                calculator.number2 = 0;
 
                 return result;
             }
         }
     };
 
+    
 
 
-
-});
